@@ -1,0 +1,187 @@
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+//fonts
+@font-face {
+    font-family: Roboto-Black;
+    src: url('../fonts/Roboto/Roboto-Black.ttf');
+}
+
+@font-face {
+    font-family: Roboto-BlackItalic;
+    src: url('../fonts/Roboto/Roboto-BlackItalic.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('../fonts/Roboto/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: Roboto-BoldItalic;
+    src: url('../fonts/Roboto/Roboto-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Italic;
+    src: url('../fonts/Roboto/Roboto-Italic.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url('../fonts/Roboto/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: Roboto-LightItalic;
+    src: url('../fonts/Roboto/Roboto-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url('../fonts/Roboto/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: Roboto-MediumItalic;
+    src: url('../fonts/Roboto/Roboto-MediumItalic.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Thin;
+    src: url('../fonts/Roboto/Roboto-Thin.ttf');
+}
+
+@font-face {
+    font-family: Roboto-ThinItalic;
+    src: url('../fonts/Roboto/Roboto-ThinItalic.ttf');
+}
+
+//class
+.Roboto-Black{
+    font-family: Roboto-Black;
+}
+
+.Roboto-BlackItalic{
+    font-family: Roboto-BlackItalic;
+}
+
+.Roboto-Bold{
+    font-family: Roboto-Bold;
+}
+
+.Roboto-BoldItalick{
+    font-family: Roboto-BoldItalic;
+}
+
+.Roboto-Italic{
+    font-family: Roboto-Italic;
+}
+
+.Roboto-Light{
+    font-family: Roboto-Light;
+}
+
+.Roboto-LightItalic{
+    font-family: Roboto-LightItalic;
+}
+
+.Roboto-Medium{
+    font-family: Roboto-Medium;
+}
+
+.Roboto-MediumItalic{
+    font-family: Roboto-MediumItalic;
+}
+
+.Roboto-Regular{
+    font-family: Roboto-Regular;
+}
+
+.Roboto-Thin{
+    font-family: Roboto-Thin;
+}
+
+.Roboto-ThinItalic{
+    font-family: Roboto-ThinItalic;
+}
+
+.logo{
+    height: 32px;
+}
+
+.card-logo{
+    height: 64px;
+}
+
+body{
+    font-family: Roboto-Regular;
+    color: $gray;
+}
+
+.bg-blue{
+    background-color: $blue;
+}
+
+.bg-gray{
+    background-color: $gray;
+}
+
+.color-gray{
+    color: $gray;
+}
+
+.bg-light-gray{
+    background-color: $light-gray;
+}
+
+.bg-yellow{
+    background-color: $yellow;
+}
+
+.color-yellow{
+    color: $yellow;
+}
+
+.bg-dark-blue{
+    background-color: $dark-blue;
+}
+
+.color-dark-blue{
+    color: $dark-blue;
+}
+
+.text-gray{
+    color: $gray;
+}
+
+.content{
+    border: 2px solid transparent;
+    transition: all 300ms;
+}
+
+.content:hover{
+    cursor: pointer;
+    border: 2px solid $light-blue;
+}
+
+#editorjs{
+
+}
+
+b{
+    font-family: Roboto-Bold;
+}
+
+.resource-item{
+    border-left: 6px solid $gray;
+}

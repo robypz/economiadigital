@@ -7,7 +7,7 @@
                     <div class="col d-none d-lg-block rounded-start p-5 bg-light-gray d-flex align-items-center justify-content-center">
                         <img class="w-100" src="{{asset('Ilustraciones/SVG/Bienvenida.svg')}}" alt="" srcset="">
                     </div>
-                    <div class="col text-center p-5">
+                    <div class="col text-center bg-white p-5">
                         <div class="d-flex align-items-center h-100">
                             <div class="welcome">
                                 <div>

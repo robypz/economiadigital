@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('unit_id')->constrained();
+            $table->foreignId('unit_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('title');
             $table->json('itemization');
         });

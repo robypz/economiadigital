@@ -20,6 +20,17 @@
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
+                    <label for="category_id" class="form-label">Categoria</label>
+                    <select name="category_id" id="category_id" class="form-select mb-3">
+                        @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                        @endforeach
+                    </select>
+                    @error('category_id')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                     <label for="description" class="form-label">Descripción</label>
                     <textarea name="description" id="description" cols="30" rows="10" class="form-control mb-3"></textarea>
                     @error('description')

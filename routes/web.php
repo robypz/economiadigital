@@ -18,8 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::group(['middleware' => ['guest']], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
 });
 
 Auth::routes();
@@ -33,9 +37,9 @@ Route::group(['middleware' => ['auth']], function () {
         Route::prefix('unit')->group(function () {
             Route::get('/create', [UnitController::class, 'create'])->name('unit.create');
             Route::post('/store', [UnitController::class, 'store'])->name('unit.store');
-            Route::get('/edit', [UnitController::class, 'edit'])->name('unit.edit');
-            Route::post('/update', [UnitController::class, 'update'])->name('unit.update');
-            Route::post('/delete', [UnitController::class, 'delete'])->name('unit.delete');
+            Route::get('/edit/{unit}', [UnitController::class, 'edit'])->name('unit.edit');
+            Route::post('/update/{unit}', [UnitController::class, 'update'])->name('unit.update');
+            Route::get('/delete/{unit}', [UnitController::class, 'destroy'])->name('unit.delete');
         });
 
         Route::prefix('content')->group(function () {

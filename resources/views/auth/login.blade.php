@@ -6,7 +6,7 @@
             <div class="col-12 col-xxl-5">
                 <div class="card border rounded-5">
 
-                    <div class="card-body p-3">
+                    <div class="card-body ">
                         <div class="text-center mb-3">
                             <img src="{{ asset('logos/Logo_V.1.0.png') }}" alt="" srcset="" class="card-logo">
                         </div>
@@ -81,7 +81,7 @@
                                             </a>
                                         @endif
                                     </div>
-                                    <div class="col text-end p-0">
+                                    <div class="col-4 text-end p-0">
                                         <a href="{{ route('register') }}" class="btn btn-link">Registrate</a>
                                     </div>
                                 </div>

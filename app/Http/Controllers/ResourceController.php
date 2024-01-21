@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Resource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -14,14 +15,23 @@ class ResourceController extends Controller
     public function index(Request $request)
     {
 
+
         if (!empty($request->title)) {
             $resources = Resource::ofTitle($request->title)->paginate(12);
+        }
+        elseif(!empty($request->category_id)) {
+            $resources = Resource::ofCategory($request->category_id)->paginate(12);
+        }
+        elseif (!empty($request->category_id) && !empty($request->title)) {
+            $resources = Resource::ofCategory($request->category_id)->ofTitle($request->title)->paginate(12);
         }
         else{
             $resources = Resource::paginate('12');
         }
 
-        return view('resource.index',compact('resources'));
+        $categories = Category::all();
+
+        return view('resource.index',compact('resources','categories'));
     }
 
     /**
@@ -29,7 +39,8 @@ class ResourceController extends Controller
      */
     public function create($content_id)
     {
-        return view('resource.create',compact('content_id'));
+        $categories = Category::all();
+        return view('resource.create',compact('content_id','categories'));
     }
 
     /**
@@ -41,6 +52,7 @@ class ResourceController extends Controller
         $validated = $request->validate([
             'content_id' => 'required',
             'title' => 'required',
+            'category_id' => 'required',
             'description' => 'required',
             'file' => 'required'
         ]);
@@ -48,6 +60,7 @@ class ResourceController extends Controller
         $resource = new Resource;
 
         $resource->title = $request->title;
+        $resource->category_id = $request->category_id;
         $resource->description = $request->description;
         $resource->user_id = $request->user()->id;
         $resource->content_id = $request->content_id;

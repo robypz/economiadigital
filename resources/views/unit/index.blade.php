@@ -5,22 +5,31 @@
             <div class="bg-light-gray p-5">
                 <div class="container">
                     <div class="row row-cols-1 row-cols-md-2">
-                        <div class="col">
-                            <h1 class="fs-1 Roboto-Black">
-                                Unidades
-                            </h1>
-                            <p class="lead">
-                                SUMERGETE EN LAS UNIDADES DISPONIBLES DE <span class="text-primary">ECONOMIA DIGITAL</span>.
-                            </p>
+                        <div class="col d-flex align-items-center">
+                            <div style="height: 150px;">
+                                <h1 class="display-3 Roboto-Black">
+                                    Unidades
+                                </h1>
+                                <p class="lead fs-3 Roboto-Bold">
+                                    CONOCE LAS UNIDADES Y CONTENIDOS DISPONIBLES DE LA MATERIA
+                                </p>
+                            </div>
+
                         </div>
+                        <div class="col text-center d-none d-lg-block">
+                            <img class="w-75" src="{{ asset('Ilustraciones/SVG/Unidades.svg') }}" alt=""
+                                srcset="">
+                        </div>
+
+                    </div>
+                    <div class="row my-3">
                         @role('admin')
                             <div class="col">
-                                <div class="d-flex justify-content-center align-items-center h-100">
-                                    <a href="{{ route('unit.create') }}" class="btn btn-primary">Agregar</a>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <a href="{{ route('unit.create') }}" class="btn btn-primary btn-lg">Agregar</a>
                                 </div>
                             </div>
                         @endrole
-
                     </div>
 
                 </div>
@@ -30,9 +39,8 @@
 
         <section class="my-4 container">
             <header class="text-center">
-                <h1 class="fs-1 text-primary Roboto-Black">Economía Digital</h1>
-                <h2 class="fs-2 Roboto-Bold">Explora las Unidades</h2>
-                <p class="lead">
+                <h2 class="display-3 Roboto-Bold">Explora las Unidades</h2>
+                <p class="lead fs-4 Roboto-Bold">
                     SELECCIONA UNA UNIDAD PARA QUE DES INICIO A TU APRENDISAJE
                 </p>
             </header>
@@ -60,6 +68,25 @@
                     </div>
                 @endforeach
             </div>
+
+            @hasanyrole('admin|teacher')
+                <div class="text-center">
+                    <h3 class="fs-1 Roboto-Bold">Gestiona los recursos</h3>
+                    <p class="lead Roboto-Medium">GESTIONA RECURSOS DIGITALES RELEVANTES</p>
+                    <a href="{{ route('resource.index') }}" class="btn btn-primary btn-lg">Inicia aquí</a>
+                </div>
+            @endhasanyrole
+
+            @hasrole('student')
+                <div class="text-center">
+                    <h3 class="fs-1 Roboto-Bold">Amplia tu Conocimiento</h3>
+                    <p class="lead Roboto-Medium">DESCUBRE Y DESCARGA RECURSOS DIGITALES RELEVANTES</p>
+                    <a href="{{ route('resource.index') }}" class="btn btn-primary btn-lg">Inicia aquí</a>
+                </div>
+            @endrole
+
+
+
 
         </section>
     </div>

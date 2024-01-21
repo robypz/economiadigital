@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="bg-ligth-gray min-vh-100 d-flex justify-content-center align-items-center">
+    <div class="bg-light-gray min-vh-100 d-flex justify-content-center align-items-center">
         <div class="card">
             <div class="card-header bg-primary text-white"><h1 class="fs-3 Roboto-Bold">Agregar llave de acceso</h1></div>
             <div class="card-body">
@@ -20,7 +20,7 @@
 
                         @hasrole('teacher')
                             @foreach ($roles as $role)
-                                @if ($role != 'admin' && 'teacher')
+                                @if ($role != 'teacher' &&  $role !='admin')
                                     <option value="{{ $role }}">{{ __($role) }}</option>
                                 @endif
                             @endforeach

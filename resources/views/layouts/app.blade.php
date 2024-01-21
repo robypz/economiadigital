@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('logos/Logo_V.2.0.png') }}" alt="" srcset="" class="logo">
+                    <img src="{{ asset('logos/Logo_V.3.0.png') }}" alt="" srcset="" class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -36,15 +36,31 @@
                             <li class="nav-item">
 
                                 <div class="dropdown-center">
-                                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
-                                        aria-expanded="false">Explorar</a>
+                                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" class="d-flex align-items-center"
+                                        aria-expanded="false"><i class="bi bi-grid fs-5 me-2"></i><span class="fs-5">Explorar</span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="{{ route('home') }}" class="dropdown-item color-gray fs-5"
                                                 href="#"><i class="bi bi-app me-2"></i>Inicio</a></li>
-                                        <li><a href="{{ route('unit.index') }}" class="dropdown-item color-gray fs-5"
-                                                ><i class="bi bi-book-fill me-2"></i>Unidades</a></li>
-                                        <li><a class="dropdown-item color-gray fs-5" href="{{route('resource.index')}}"><i
+                                        <li><a href="{{ route('unit.index') }}" class="dropdown-item color-gray fs-5"><i
+                                                    class="bi bi-book-fill me-2"></i>Unidades</a></li>
+                                        <li><a class="dropdown-item color-gray fs-5" href="{{ route('resource.index') }}"><i
                                                     class="bi bi-collection-fill me-2"></i>Recursos</a></li>
+
+                                        @role('admin')
+                                        <li><a class="dropdown-item color-gray fs-5"
+                                            href="{{ route('user.index') }}"><i
+                                                class="bi bi-person-fill me-2"></i>Usuarios</a></li>
+                                                <li><a class="dropdown-item color-gray fs-5"
+                                                    href="{{ route('key.index') }}"><i
+                                                        class="bi bi-key me-2"></i>Llaves</a></li>
+                                        @endrole
+
+                                        @role('teacher')
+                                                <li><a class="dropdown-item color-gray fs-5"
+                                                    href="{{ route('key.index') }}"><i
+                                                        class="bi bi-key me-2"></i>Llaves</a></li>
+                                        @endrole
+
                                     </ul>
                                 </div>
                             </li>
@@ -72,14 +88,14 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle d-flex align-items-center"
                                     href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false" v-pre>
-                                    <i class="bi bi-person-circle fs-3 nav-item me-2"></i>{{ Auth::user()->name }}
+                                    <i class="bi bi-person-circle fs-5 nav-item me-2"></i><span class="fs-5">{{ Auth::user()->name }}</span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        <i class="bi bi-box-arrow-right fs-5 me-2"></i>{{ __('Logout') }}
                                     </a>
                                     <a href=""></a>
 
@@ -97,19 +113,6 @@
         <main class="">
             @yield('content')
         </main>
-
-        <footer class="bg-gray">
-            <div class="container p-5">
-                <div class="row">
-                    <div class="col text-center"><img src="{{ asset('logos/Logo_V.2.1.png') }}" alt=""
-                            srcset="" class="logo"></div>
-                    <div class="col text-center"><img src="{{ asset('logos/Logo_AIS_V.1.0.png') }}" alt=""
-                            srcset="" class="logo"></div>
-                    <div class="col text-center"><img src="{{ asset('logos/Logo_UNERG_V.1.0.png') }}" alt=""
-                            srcset="" class="logo"></div>
-                </div>
-            </div>
-        </footer>
     </div>
 </body>
 

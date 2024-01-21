@@ -61,7 +61,7 @@ class UnitController extends Controller
      */
     public function edit(Unit $unit)
     {
-        //
+        return view('unit.edit',compact('unit'));
     }
 
     /**
@@ -69,7 +69,12 @@ class UnitController extends Controller
      */
     public function update(Request $request, Unit $unit)
     {
-        //
+        $unit->number = $request->number;
+        $unit->title = $request->title;
+        $unit->description = $request->description;
+        $unit->save();
+
+        return view('unit.show',compact('unit'));
     }
 
     /**
@@ -77,6 +82,7 @@ class UnitController extends Controller
      */
     public function destroy(Unit $unit)
     {
-        //
+        $unit->delete();
+        return redirect(route('unit.index'));
     }
 }

@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('content_id')->constrained();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('content_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('url');
             $table->timestamps();
         });

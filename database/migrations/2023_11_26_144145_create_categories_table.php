@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        /*Schema::create('resource_categories', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
         });
 
         Schema::table('resources', function (Blueprint $table) {
-            $table->foreignId('resource_category_id')->constrained();
-        });*/
+            $table->foreignId('category_id')->constrained();
+        });
     }
 
     /**
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('resource_categories');
+        Schema::dropIfExists('categories');
     }
 };

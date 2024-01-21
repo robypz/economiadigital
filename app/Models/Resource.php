@@ -16,6 +16,11 @@ class Resource extends Model
         return $this->belongsTo(Content::class);
     }
 
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
@@ -28,6 +33,6 @@ class Resource extends Model
 
     public function scopeOfCategory(Builder $query, string $category): void
     {
-        $query->where('category', $category);
+        $query->where('category_id', $category);
     }
 }

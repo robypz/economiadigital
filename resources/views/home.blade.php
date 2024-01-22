@@ -6,7 +6,7 @@
             <section class="py-4">
                 <div class="row">
                     <div class="col p-5 Roboto-Bold">
-                        <h1 class="fs-1">¡HOLA!</h1>
+                        <h1 class="display-3">¡HOLA!</h1>
                         <h3 class="fs-4">TE DAMOS LA BIENVENIDA A LA HERRAMIENTA EDUCATIVA</h3>
                     </div>
                     <div class="col text-center d-none d-lg-block">
@@ -22,7 +22,7 @@
     <div class="container">
         <section>
             <h1 class="text-center display-3 Roboto-Bold">Aprendizaje Práctico</h1>
-            <p class="text-center Roboto-Bold fs-4">APRENDE DE MANERA GRADUAL Y <br> A TU PROPIO RITMO.</p>
+            <p class="text-center Roboto-Bold fs-4">APRENDE DE MANERA GRADUAL Y A TU PROPIO RITMO</p>
             <div class="row row-flex align-items-center justify-content-center">
                 <div class="col-12 col-md-6 col-lg-4 mb-3">
                     <a href="" class="text-decoration-none ">

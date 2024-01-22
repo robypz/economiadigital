@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col d-flex align-items-center">
                         <div style="min-height: 150px;">
-                            <h1 class="display-3 Roboto-Black">Hola!</h1>
+                            <h1 class="display-3 Roboto-Black">¡Hola!</h1>
                             <h2 class="fs-3 Roboto-Bold">TE DAMOS LA BIENVENIDA A  LA HERRAMIENTA EDUCATIVA.</h2>
                         </div>
 

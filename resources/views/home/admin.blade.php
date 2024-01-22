@@ -7,8 +7,8 @@
                 <div class="row">
                     <div class="col d-flex align-items-center">
                         <div style="min-height: 150px;">
-                            <h1 class="display-3 Roboto-Black">¡Bienvenido!</h1>
-                            <h2 class="fs-3 Roboto-Bold">TE DAMOS LA BIENVENIDA A <br> LA HERRAMIENTA EDUCATIVA.</h2>
+                            <h1 class="display-3 Roboto-Black">Hola!</h1>
+                            <h2 class="fs-3 Roboto-Bold">TE DAMOS LA BIENVENIDA A  LA HERRAMIENTA EDUCATIVA.</h2>
                         </div>
 
                     </div>
@@ -20,7 +20,7 @@
         </header>
         <section class="container py-4">
             <header class="text-center">
-                <h1 class="fs-1 Roboto-Black">Administra el Contenido</h1>
+                <h1 class="fs-1 Roboto-Black">Gestiona el Contenido</h1>
                 <h5 class="fs-5 Roboto-Bold">GESTIONA Y PERSONALIZA EL CONTENIDO DE LA MATERIA</h5>
             </header>
 
@@ -45,7 +45,7 @@
                         <div class="card ">
                             <div class="card-body bg-gray text-center">
                                 <div class="py-5">
-                                    <i class="bi bi-key display-1 text-white"></i>
+                                    <i class="bi bi-key-fill display-1 text-white"></i>
                                 </div>
                             </div>
                             <div class="card-footer bg-dark-blue text-white Roboto-Medium fs-5 text-center">
@@ -59,7 +59,7 @@
                         <div class="card">
                             <div class="card-body bg-yellow text-center">
                                 <div class="py-5">
-                                    <i class="bi bi-file-person color-gray display-1"></i>
+                                    <i class="bi bi-person-fill color-gray display-1"></i>
                                 </div>
                             </div>
                             <div class="card-footer text-center bg-dark-blue Roboto-Medium fs-5 text-white">

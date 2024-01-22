@@ -37,10 +37,10 @@
 
                                 <div class="dropdown-center">
                                     <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" class="d-flex align-items-center"
-                                        aria-expanded="false"><i class="bi bi-grid fs-5 me-2"></i><span class="fs-5">Explorar</span></a>
+                                        aria-expanded="false"><i class="bi bi-grid-fill fs-5 me-2"></i><span class="fs-5">Explorar</span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="{{ route('home') }}" class="dropdown-item color-gray fs-5"
-                                                href="#"><i class="bi bi-app me-2"></i>Inicio</a></li>
+                                                href="#"><i class="bi bi-house-door-fill me-2"></i>Inicio</a></li>
                                         <li><a href="{{ route('unit.index') }}" class="dropdown-item color-gray fs-5"><i
                                                     class="bi bi-book-fill me-2"></i>Unidades</a></li>
                                         <li><a class="dropdown-item color-gray fs-5" href="{{ route('resource.index') }}"><i
@@ -52,7 +52,7 @@
                                                 class="bi bi-person-fill me-2"></i>Usuarios</a></li>
                                                 <li><a class="dropdown-item color-gray fs-5"
                                                     href="{{ route('key.index') }}"><i
-                                                        class="bi bi-key me-2"></i>Llaves</a></li>
+                                                        class="bi bi-key-fill me-2"></i>Llaves</a></li>
                                         @endrole
 
                                         @role('teacher')

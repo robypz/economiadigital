@@ -11,7 +11,12 @@
                                     Unidades
                                 </h1>
                                 <p class="lead fs-3 Roboto-Bold">
-                                    CONOCE LAS UNIDADES Y CONTENIDOS DISPONIBLES DE LA MATERIA
+                                    @hasanyrole('admin|teacher')
+                                        SELECCIONA UNA UNIDAD PARA VISUALIZAR EL TEMA Y EL CONTENIDO
+                                    @endhasanyrole
+                                    @role('student')
+                                        SELECCIONA UNA UNIDAD PARA QUE DES INICIO A TU APRENDIZAJE
+                                    @endrole
                                 </p>
                             </div>
 
@@ -41,7 +46,12 @@
             <header class="text-center">
                 <h2 class="display-3 Roboto-Bold">Explora las Unidades</h2>
                 <p class="lead fs-4 Roboto-Bold">
-                    SELECCIONA UNA UNIDAD PARA QUE DES INICIO A TU APRENDISAJE
+                    @hasanyrole('admin|teacher')
+                        SELECCIONA UNA UNIDAD PARA VISUALIZAR EL TEMA Y EL CONTENIDO
+                    @endhasanyrole
+                    @role('student')
+                        SELECCIONA UNA UNIDAD PARA QUE DES INICIO A TU APRENDIZAJE
+                    @endrole
                 </p>
             </header>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xxl-4">
@@ -71,7 +81,7 @@
 
             @hasanyrole('admin|teacher')
                 <div class="text-center">
-                    <h3 class="fs-1 Roboto-Bold">Gestiona los recursos</h3>
+                    <h3 class="fs-1 Roboto-Bold">Gestiona los Recursos</h3>
                     <p class="lead Roboto-Medium">GESTIONA RECURSOS DIGITALES RELEVANTES</p>
                     <a href="{{ route('resource.index') }}" class="btn btn-primary btn-lg">Inicia aquí</a>
                 </div>

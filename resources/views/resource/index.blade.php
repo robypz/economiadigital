@@ -10,7 +10,12 @@
                             Recursos
                         </h1>
                         <p class="lead fs-3 Roboto-Medium">
-                            EXPLORA UNA AMPLIA VARIEDAD DE RECURSOS EDUCATIVOS
+                            @hasanyrole('admin|teacher')
+                                AGREGA RECURSOS PARA AMPLIAR EL CONTENIDO DE LA MATERIA
+                            @endhasanyrole
+                            @role('student')
+                                EXPLORA UNA AMPLIA VARIEDAD DE RECURSOS EDUCATIVOS
+                            @endrole
                         </p>
                     </div>
 

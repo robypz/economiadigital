@@ -7,8 +7,8 @@
                 <div class="row p-5">
                     <div class="col d-flex align-items-center justify-content-center">
                         <div style="height: 150px;">
-                            <h1 class="display-3 Roboto-Black">Hola!</h1>
-                            <h2 class="fs-3 Roboto-Bold">TE DAMOS LA BIENVENIDA A <br> LA HERRAMIENTA EDUCATIVA.</h2>
+                            <h1 class="display-3 Roboto-Black">!Hola!</h1>
+                            <h2 class="fs-3 Roboto-Bold">TE DAMOS LA BIENVENIDA A LA HERRAMIENTA EDUCATIVA</h2>
                         </div>
 
                     </div>
@@ -20,8 +20,8 @@
         </header>
         <section class="container py-4">
             <header class="text-center">
-                <h1 class="fs-1 Roboto-Black">Administra el Contenido</h1>
-                <h5 class="fs-5 Roboto-Bold">GESTIONA Y PERSONALIZA EL CONTENIDO DE LA MATERIA</h5>
+                <h1 class="fs-1 Roboto-Black">Explora el Contenido</h1>
+                <h5 class="fs-5 Roboto-Bold">DESCUBRE LAS UNIDADES Y EL CONTENIDO DE LA MATERIA</h5>
             </header>
 
             <div class="row">

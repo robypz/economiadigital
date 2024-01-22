@@ -29,7 +29,7 @@
                         <div class="card">
                             <div class="card-body bg-primary text-center">
                                 <div class="py-5">
-                                    <i class="bi bi-card-image text-white display-1"></i>
+                                    <i class="bi bi-book-fill text-white display-1"></i>
                                 </div>
 
                             </div>

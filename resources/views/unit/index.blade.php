@@ -61,7 +61,7 @@
 
                             <div class="card bg-primary h-100">
                                 <div class="card-body text-center p-5">
-                                    <i class="bi bi-folder-fill display-3 text-white"></i>
+                                    <i class="bi bi-book-fill display-3 text-white"></i>
                                 </div>
                                 <div class="card-footer bg-gray text-white">
                                     <h3 class="fs-3 Roboto-Bold">

@@ -58,7 +58,7 @@
                                         @role('teacher')
                                                 <li><a class="dropdown-item color-gray fs-5"
                                                     href="{{ route('key.index') }}"><i
-                                                        class="bi bi-key me-2"></i>Llaves</a></li>
+                                                        class="bi bi-key-fill me-2"></i>Llaves</a></li>
                                         @endrole
 
                                     </ul>

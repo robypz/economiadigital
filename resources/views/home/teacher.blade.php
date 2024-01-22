@@ -61,7 +61,7 @@
                         <div class="card ">
                             <div class="card-body bg-primary text-center">
                                 <div class="py-5">
-                                    <i class="bi bi-key display-1 text-white"></i>
+                                    <i class="bi bi-key-fill display-1 text-white"></i>
                                 </div>
                             </div>
                             <div class="card-footer bg-dark-blue text-white text-center Roboto-Medium fs-5">

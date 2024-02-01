@@ -47,7 +47,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('/store', [ContentController::class, 'store'])->name('content.store');
             Route::get('/edit', [ContentController::class, 'edit'])->name('content.edit');
             Route::post('/update', [ContentController::class, 'update'])->name('content.update');
-            Route::post('/delete', [ContentController::class, 'delete'])->name('content.delete');
+            Route::get('/delete/{content}', [ContentController::class, 'destroy'])->name('content.delete');
         });
 
     });
@@ -82,6 +82,7 @@ Route::group(['middleware' => ['auth']], function () {
         });
         Route::prefix('user')->group(function () {
             Route::get('/', [UserController::class, 'index'])->name('user.index');
+            Route::get('/delete/{user}', [UserController::class, 'destroy'])->name('user.destroy');
         });
 
         Route::prefix('resource')->group(function () {

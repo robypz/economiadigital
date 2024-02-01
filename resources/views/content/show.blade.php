@@ -6,8 +6,35 @@
 
 
         <section class="container py-4">
-            <header>
+            <header class="mb-3 bg-light-gray p-3 rounded">
                 <h1 class="fs-1 Roboto-Black">CONTENIDO: {{ $content->title }}</h1>
+                <div class="">
+                    <h3 class="Roboto-Bold fs-3">Administra</h3>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</button>
+
+
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-danger text-white">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Contenido</h1>
+                                    <button type="button" class="btn-close text-white" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ¿Esta seguro que desea eliminar el contenido?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <a href="{{route('content.delete',$content)}}" class="btn btn-danger">Eliminar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </header>
             @foreach ($content->itemization['blocks'] as $block)
                 @if ($block['type'] == 'paragraph')

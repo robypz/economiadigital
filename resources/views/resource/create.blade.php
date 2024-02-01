@@ -32,7 +32,7 @@
                         </span>
                     @enderror
                     <label for="description" class="form-label">Descripción</label>
-                    <textarea name="description" id="description" cols="30" rows="10" class="form-control mb-3"></textarea>
+                    <textarea name="description" id="description" cols="30" rows="10" class="form-control mb-3" maxlength="255"></textarea>
                     @error('description')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

@@ -10,4 +10,9 @@ class UserController extends Controller
         $users = User::paginate(12);
         return view('user.index',compact('users'));
     }
+
+    public function destroy(User $user) {
+        $user->delete();
+        return redirect(route('user.index'));
+    }
 }

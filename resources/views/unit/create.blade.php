@@ -20,7 +20,7 @@
                                     <label for="number" class="form-label">Titulo</label>
                                     <input type="text" class="form-control mb-3" name="title">
                                     <label for="description">Descripcion</label>
-                                    <textarea name="description" id="" cols="30" rows="10" class="form-control mb-3">
+                                    <textarea name="description" id="" cols="30" rows="10" class="form-control mb-3" maxlength="255">
 
                                     </textarea>
                                     <input type="submit" class="btn btn-primary text-white w-100" value="Guardar">

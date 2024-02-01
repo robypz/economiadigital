@@ -12,7 +12,7 @@
                             <div class="welcome">
                                 <div>
                                     <h1 class="fs-1 Roboto-Black mb-3">¡BIENVENIDO!</h1>
-                                    <h3 class="fs-3 Roboto-Bold mb-3">A LA HERRAMIENTA EDUCATIVA PARA EL APRENDISAJE DE ECONOMÍA
+                                    <h3 class="fs-3 Roboto-Bold mb-3">A LA HERRAMIENTA EDUCATIVA PARA EL APRENDIZAJE DE ECONOMÍA
                                         DIGITAL</h3>
 
                                 </div>

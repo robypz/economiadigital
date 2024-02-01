@@ -75,6 +75,9 @@ class ContentController extends Controller
      */
     public function destroy(Content $content)
     {
-        //
+        $unit=$content->unit_id;
+        $content->delete();
+
+        return redirect(route('unit.show',$unit));
     }
 }

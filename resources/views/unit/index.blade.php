@@ -27,19 +27,21 @@
                         </div>
 
                     </div>
-                    <div class="row my-3">
-                        @role('admin')
-                            <div class="col">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <a href="{{ route('unit.create') }}" class="btn btn-primary btn-lg">Agregar</a>
-                                </div>
-                            </div>
-                        @endrole
-                    </div>
+
+
 
                 </div>
+                @role('admin')
+                    <div class="row mt-5">
+                        <div class="col text-center">
+                            <a href="{{ route('unit.create') }}" class="btn btn-primary">Agregar</a>
+
+                        </div>
+                    </div>
+                @endrole
 
             </div>
+
         </header>
 
         <section class="my-4 container">
@@ -56,21 +58,21 @@
             </header>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xxl-4">
                 @foreach ($units as $unit)
-                    <div class="col p-5">
+                    <div class="col p-3">
                         <a href="{{ route('unit.show', ['unit' => $unit]) }}" class="text-decoration-none">
 
                             <div class="card bg-primary h-100">
                                 <div class="card-body text-center p-5">
                                     <i class="bi bi-book-fill display-3 text-white"></i>
                                 </div>
-                                <div class="card-footer bg-gray text-white">
-                                    <h3 class="fs-3 Roboto-Bold">
+                                <div class="card-footer bg-gray text-white p-3"
+                                    style="min-height: 100px !important; max-height: 100px !important; overflow: hidden;">
+                                    <h3 class="fs-5 Roboto-Bold">
                                         Unidad #{{ $unit->number }}
                                     </h3>
-                                    <p class="lead">
+                                    <p>
                                         {{ $unit->title }}
                                     </p>
-
                                 </div>
                             </div>
 
